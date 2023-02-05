@@ -1,57 +1,57 @@
 {% load static%}
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru-RU" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Shop</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href={%  static "main/css/main.css"%}>
 </head>
 <body >
-    {% block content %}
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Мясная лавка</a>
-                 <ul class="header_container">
-                   <li class="menu_item"><a href="#" class="meny_link">Корзина</a></li>
-                   <li class="menu_item"><a href="#topek" class="meny_link">Заказать</a></li>
-                   <li class="menu_item"><a href="#info" class="meny_link">Про нас</a></li>
-                   <li class="menu_item"><a href="#" class="meny_link">Регистрация</a></li>
-                 </ul>
-            </div>
-        </div>
-
-      <div class="header_body body-header">
-        <div class="body-header_container">
-          <a href="" class body-header_logo></a>
-          <div class="body-header_search"></div>
-          <div class="body-header_actions"></div>
-        </div>
-      </div>
+<div id="block-body">
+     <header>
+       <div class="logo">
+        <a href="">
+          <span class="use">Meet</span>-<span class="web">Shop</span>
+        </a>
+       </div>
+       <div class="top-menu">
+         <ul>
+             <li><a href="#">Заказать</a></li>
+             <li><a href="#">Про нас</a></li>
+             <li><a href="#">Корзина</a></li>
+             <li><a href="#">Вход</a></li>
+             <li><a href="#">Регистрация</a></li>
+         </ul>
+       </div>
+     </header>
+    </div>
       <div id="headerwrap">
-        <img src="{% static 'main/img/6.png'  %}" alt="">
+
       </div>
-        <br><br>
-        <div class="row centered">
+
+        <div id="r">
             <div class="page-wrapper">
                 <div class="content-wrapper-text">
-                    <h3>Говядина</h3>
-                    <p class="blok1">Говядина – мясо постное и достаточно жесткое, оно используется для тушения, варки, изготовления пельменей и котлетного фарша.</p>
+                    <h2>Говядина</h2>
+                    <br>
+                    <p><span class="letter">Говядина – мясо постное и достаточно жесткое, оно используется для тушения, варки, изготовления пельменей и котлетного фарша.</span></p>
                 </div>
               <div class="content-wrapper-text">
-                  <h3>Свинина</h3>
+                  <h2>Свинина</h2>
+                  <br>
                   <p class="blok1">Свинина – мясо более жирное, но и более нежное, предназначенное для жарки и тушения, приготовления шашлыка, буженины, котлетного фарша, отбивных и пельменей.</p>
               </div>
                 <div class="content-wrapper-text">
-                  <h3>Курятина</h3>
+                  <h2>Курятина</h2>
+                  <br>
                   <p class="blok1">Курица давно заняла достойное место в меню людей, заботящихся о своём здоровье. Многие диеты включают в себя блюда из курицы. Куриное филе не содержит много жира. При этом, оно наполнено полезными белками..</p>
                 </div>
             </div>
         </div>
-        <br><br>
-        <h1>Какого мяса желаете ?</h1>
-        <div class="row centered">
+
+        <div class="row">
+            <h1 class="row">Какого мяса желаете ?</h1>
             <div class="page-wrapper">
                 <div class="content-wrapper">
                     <a href="{% url 'cow' %}"><img src="{% static 'main/img/1.png'  %}" alt=""  class="scale"></a>
@@ -65,34 +65,19 @@
             </div>
         </div>
 
-      <div class="container wb">
-        <div class="row centered">
-          <br><br>
-          <div class="futer">
-            <h4>Немного о нас</h4><a name="info"></a>
-            <p>Текст</p>
-            <p><br><br></p>
-          </div>
-          <div class="col-lg-2"></div>
-        </div>
-      </div>
-      <div id="r">
+      <div id="onas">
         <div class="container">
-          <div class="row centered">
-            <div class="col-lg-8 col-lg-offset-2">
-              <h4>Костыль</h4>
-              <p>Текст</p>
-            </div>
-          </div>
+            <h1>Немного о нас</h1>
+            <br>
+            <p>Мясо прочно вошло в рацион питания человечества еще на заре его появления. Наши предки поедали мясо в сыром виде, затем додумались его варить, жарить, тушить, запекать, наконец. В Античности без мяса не проходило ни одно застолье, его воспевали и называли вкуснейшим блюдом на земле. На Руси к мясу относились по-разному. Во времена язычества убийство скота носило церемониальный характер, а после крещения — мясо с удовольствием стали употреблять в пищу, за исключением периода поста. В мясе содержатся необходимые для здоровья человека вещества и микроэлементы. Так, мясо является источником витаминов D, A и группы В. Довольно давно люди научились готовить не только само мясо, но и всевозможные деликатесы, и другие продукты питания на его основе. К примеру, популярные на сегодняшний день колбасы, сосиски, сардельки, а также разные копчености и полуфабрикаты. Без мяса трудно представить полноценный рацион современного человека, хотя и обретают всю большую славу вегетарианство или веганство.</p>
+
         </div>
       </div>
+
       <div id="f">
         <div class="container">
         </div>
       </div>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-    {% endblock %}
     </body>
 </html>
