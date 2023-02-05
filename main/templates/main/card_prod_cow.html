@@ -28,7 +28,7 @@
 
 
 <div class="name-meet">
-     <h1>Говядина</h1>
+     <h1>{{ h1 }}</h1>
 </div>
 
 <div class="glf">
@@ -39,156 +39,22 @@
  <div class="container">
   <div class="wrapper">
    <div class="page-wrapper">
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
+    {% for cards_cow in products %}
+         <div class="card">
+      <img src="{{ cards_cow.image.url }}" alt="">
       <div class="content">
         <div class="row">
           <div class="details">
-            <span>Рёбра</span>
+            <span>{{ cards_cow.name }}</span>
           </div>
-          <div class="price">450 ₽</div>
+          <div class="price">{{ cards_cow.price }}</div>
         </div>
         <div class="buttons">
           <button class="cart-btn">В корзину</button>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static "main/img/cow_pistol.png"%}" alt="">
-      <div class="content">
-        <div class="row">
-          <div class="details">
-            <span>Рёбра</span>
-          </div>
-          <div class="price">450 ₽</div>
-        </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-
+    {% endfor %}
    </div>
   </div>
  </div>
