@@ -1,0 +1,1 @@
+[{"model": "main.productcategory", "pk": 1, "fields": {"name": "Свинина", "discription": "Описание Свинины"}}, {"model": "main.productcategory", "pk": 2, "fields": {"name": "Говядина", "discription": "Описание Говядины"}}, {"model": "main.productcategory", "pk": 3, "fields": {"name": "Курятина", "discription": "Описание Курятины"}}]
