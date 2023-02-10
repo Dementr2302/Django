@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href={%  static "main/css/main.css"%}>
+    <title>Meet-Shop</title>
 </head>
 <body >
 <div id="block-body">
@@ -18,7 +19,7 @@
        <div class="top-menu">
          <ul>
              <li><a href="#">Заказать</a></li>
-             <li><a href="#">Про нас</a></li>
+             <li><a href="{% url 'users:profile' %}">Профиль</a></li>
              <li><a href="#">Корзина</a></li>
              <li><a href="{% url 'users:login' %}">Войти</a></li>
          </ul>

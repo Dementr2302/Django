@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
 * {
   padding: 0;
   border: 0;
@@ -51,8 +48,6 @@ header {
     font-size: 13px;
     color: white;
 }
-
-
 .top-menu {
     overflow-inline: revert;
     float: right;
@@ -89,14 +84,6 @@ header {
     -moz-transition:all 0.5s ease;
     background: rgba(255, 174, 0, 0.85);
 }
-
-
-
-
-
-
-
-
 h2,h4,h1,h3{
     text-align: center;
     font-family: Ultra;
@@ -218,23 +205,6 @@ a:hover,a:focus{
     -o-background-size: cover;
 
 }
-
-#headerwrap h1 {
-    margin-top: 100px;
-    color: darkred;
-    font-size: 70px;
-    font-weight: 300;
-    Letter-spacing: 3px;
-}
-#headerwrap h1 {
-    margin-top: 100px;
-    color: darkred;
-    font-size: 40px;
-    Letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
 .w h4 {
     font-size: 25px;
 }
