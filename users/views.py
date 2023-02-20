@@ -4,6 +4,7 @@ from users.forms import UserLogForm, UserRegForm, UserProfileForm
 from django.contrib import auth
 from django.urls import reverse
 from main.models import Basket
+from django.contrib.auth.decorators import login_required
 def login(request):
     if request.method =='POST':                         #КОНТРОЛЬ // проверка на пост запрос
         form = UserLogForm(data=request.POST)           # вызываем класс , передавая параметр - данные которые были заполнены в форме
@@ -30,6 +31,7 @@ def registration(request):
     context = {'form': form}
     return render(request, 'users/registration.html', context)
 
+@login_required
 def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)

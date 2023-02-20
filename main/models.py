@@ -19,7 +19,7 @@ class Product(models.Model):
         return f'Продукт: {self.name} | Категория {self.category}'
 
 class Basket(models.Model):
-    user = models.ForeignKey(to=User,on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(default=0)
     create_timestamp = models.DateTimeField(auto_now_add=True)

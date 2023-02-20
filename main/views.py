@@ -2,7 +2,7 @@ from django.shortcuts import render ,HttpResponseRedirect
 from django.http import HttpResponse
 from main.models import ProductCategory, Product
 from main.models import Basket
-
+from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'main/index.html')
 
@@ -30,6 +30,7 @@ def cards_chic(request):
     }
     return render(request, 'main/card_prod_chicken.html', context)
 
+@login_required
 def basket_add(requset, product_id):
     product = Product.objects.get(id=product_id)
     baskets = Basket.objects.filter(user=requset.user, product=product)
@@ -42,7 +43,7 @@ def basket_add(requset, product_id):
         basket.save()
 
     return HttpResponseRedirect(requset.META['HTTP_REFERER'])
-
+@login_required
 def basket_remove(request, basket_id):
     basket = Basket.objects.get(id=basket_id)
     basket.delete()
