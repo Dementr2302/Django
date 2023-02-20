@@ -16,14 +16,22 @@
           <span class="use">Meet</span>-<span class="web">Shop</span>
         </a>
        </div>
+       {% if user.is_authenticated %}
        <div class="top-menu">
          <ul>
              <li><a href="#">Заказать</a></li>
              <li><a href="{% url 'users:profile' %}">Профиль</a></li>
              <li><a href="#">Корзина</a></li>
+             <li><a href="{% url 'users:logout' %}">Выйти</a></li>
+         </ul>
+       </div>
+       {% else %}
+               <div class="top-menu">
+         <ul>
              <li><a href="{% url 'users:login' %}">Войти</a></li>
          </ul>
        </div>
+       {% endif %}
      </header>
     </div>
       <div id="headerwrap">
