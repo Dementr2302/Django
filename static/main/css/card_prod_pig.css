@@ -154,6 +154,16 @@ button:first-child:hover {
   color: #fff;
   background: rgba(255, 174, 0, 0.85);
 }
+
+a.text1:active,
+a.text1:hover,
+a.text1
+{
+    text-decoration: none;
+    text-decoration-color: rgba(255, 174, 0, 0.85);
+    color: #ffffff;
+    border-bottom: 0.1px solid white;
+}
 .buttons button:last-child {
   color: #fff;
   margin-left: 10px;

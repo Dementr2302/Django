@@ -7,6 +7,16 @@
   font-family: "Poppins", sans-serif;
 
 }
+
+a.text1:active,
+a.text1:hover,
+a.text1
+{
+    text-decoration: none;
+    text-decoration-color: rgba(255, 174, 0, 0.85);
+    color: #ffffff;
+    border-bottom: 0.1px solid white;
+}
 .section{
     background-color: #f2f2f2;
 }

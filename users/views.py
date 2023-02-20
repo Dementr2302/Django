@@ -3,6 +3,7 @@ from users.models import User
 from users.forms import UserLogForm, UserRegForm, UserProfileForm
 from django.contrib import auth
 from django.urls import reverse
+from main.models import Basket
 def login(request):
     if request.method =='POST':                         #КОНТРОЛЬ // проверка на пост запрос
         form = UserLogForm(data=request.POST)           # вызываем класс , передавая параметр - данные которые были заполнены в форме
@@ -39,9 +40,20 @@ def profile(request):
             print(form.errors)
     else:
         form = UserProfileForm(instance=request.user)
-    context = {'title': "Meet - Profil", 'form': form}
+
+    baskets = Basket.objects.filter(user=request.user)
+    total_sum = sum(basket.sum() for basket in baskets)
+    total_quantity = sum(basket.quantity for basket in baskets)
+
+    context = {'title': "Meet - Profil",
+               'form': form,
+               'baskets': baskets,
+               'total_sum': total_sum,
+               'total_quantity': total_quantity,
+               }
     return render(request, 'users/profile.html', context)
 
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('home'))
+

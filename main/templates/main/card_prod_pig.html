@@ -16,10 +16,8 @@
        </div>
        <div class="top-menu">
          <ul>
-             <li><a href="#">Заказать</a></li>
-             <li><a href="#">Про нас</a></li>
-             <li><a href="#">Корзина</a></li>
-             <li><a href="#">Войти</a></li>
+             <li><a href="{% url 'users:profile' %}">Корзина</a></li>
+             <li><a href="{% url 'users:logout' %}">Выйти</a></li>
          </ul>
        </div>
      </header>
@@ -48,9 +46,11 @@
           </div>
           <div class="price">{{ cards_pig.price }}</div>
         </div>
-        <div class="buttons">
-          <button class="cart-btn">В корзину</button>
-        </div>
+          <a class="text1" href="{% url 'basket_add'  cards_pig.id %}">
+               <div class="buttons">
+                    <button class="cart-btn">В корзину</button>
+               </div>
+          </a>
       </div>
     </div>
     {% endfor %}

@@ -15,6 +15,15 @@
     padding-top: 10px;
 }
 
+a.text1:active,
+a.text1:hover,
+a.text1
+{
+    text-decoration: none;
+    text-decoration-color: rgba(255, 174, 0, 0.85);
+    color: #ffffff;
+    border-bottom: 0.1px solid white;
+}
 ::selection {
   color: #fff;
   background: rgba(255, 174, 0, 0.85);

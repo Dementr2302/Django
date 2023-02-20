@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render ,HttpResponseRedirect
 from django.http import HttpResponse
 from main.models import ProductCategory, Product
-
+from main.models import Basket
 
 def index(request):
     return render(request, 'main/index.html')
@@ -29,3 +29,21 @@ def cards_chic(request):
         'categories': ProductCategory.objects.all(),
     }
     return render(request, 'main/card_prod_chicken.html', context)
+
+def basket_add(requset, product_id):
+    product = Product.objects.get(id=product_id)
+    baskets = Basket.objects.filter(user=requset.user, product=product)
+
+    if not baskets.exists():
+        Basket.objects.create(user=requset.user, product=product, quantity=1)
+    else:
+        basket = baskets.first()
+        basket.quantity += 1
+        basket.save()
+
+    return HttpResponseRedirect(requset.META['HTTP_REFERER'])
+
+def basket_remove(request, basket_id):
+    basket = Basket.objects.get(id=basket_id)
+    basket.delete()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])

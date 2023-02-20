@@ -19,9 +19,7 @@
        {% if user.is_authenticated %}
        <div class="top-menu">
          <ul>
-             <li><a href="#">Заказать</a></li>
-             <li><a href="{% url 'users:profile' %}">Профиль</a></li>
-             <li><a href="#">Корзина</a></li>
+             <li><a href="{% url 'users:profile' %}">Корзина</a></li>
              <li><a href="{% url 'users:logout' %}">Выйти</a></li>
          </ul>
        </div>

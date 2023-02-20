@@ -9,7 +9,7 @@ class UserLogForm(AuthenticationForm):
         'class': 'form-control py-4', 'placeholder': 'Введите пароль'}))
 
 
-    class Meta:                          #он принимает доп параметры котор отвечают за то с какой моделью будет работать форма и с какими полями
+    class Meta:       #он принимает доп параметры котор отвечают за то с какой моделью будет работать форма и с какими полями
         model = User
         fields = ('username', 'password')
 
